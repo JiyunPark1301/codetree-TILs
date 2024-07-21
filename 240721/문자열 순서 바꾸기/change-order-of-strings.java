@@ -5,13 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         String t = sc.next();
-        String temp;
-
-        temp = s;
-        s = t;
-        t = temp;
-        
-        System.out.println(s);
+       
         System.out.println(t);
+        System.out.println(s);
     }
 }
