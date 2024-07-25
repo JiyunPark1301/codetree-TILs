@@ -6,8 +6,8 @@ public class Main {
 
         int n = sc.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print(i * n + " ");
+        for (int i = n; i <= n * 5; i += n) {
+            System.out.print(i + " ");
         }
     }
 }
