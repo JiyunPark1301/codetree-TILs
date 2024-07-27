@@ -6,16 +6,17 @@ public class Main {
 
         int a = sc.nextInt();
         int b = sc.nextInt();
+        int v = a;
 
         for (int i = a; i <= b; i++) {
-            if (i % 2 == 1) {
-                i *= 2;
-            } else {
-                i += 3;
-            }
+            if (v <= b)
+                System.out.print(v + " ");
 
-            if (i < b)
-                System.out.print(i + " ");
+            if (i % 2 == 1) {
+                v *= 2;
+            } else {
+                v += 3;
+            }
         }
     }
 }
