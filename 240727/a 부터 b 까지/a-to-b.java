@@ -8,15 +8,12 @@ public class Main {
         int b = sc.nextInt();
         int v = a;
 
-        for (int i = a; i <= b; i++) {
-            if (v <= b)
-                System.out.print(v + " ");
-
-            if (i % 2 == 1) {
+        while (v <= b) {
+            System.out.print(v + " ");
+            if (v % 2 == 1)
                 v *= 2;
-            } else {
+            else
                 v += 3;
-            }
         }
     }
 }
