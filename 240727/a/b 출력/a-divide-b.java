@@ -8,17 +8,20 @@ public class Main {
         int b = sc.nextInt();
         int v;
         int r = a;
-        if (a < b) {
-            System.out.print("0.");
+        String result = "";
+        
+        // 3/7
+        for (int i = 1; i <= 20; i++) {
+            v = r * 10 / b; //3*10/7=4 //2*10/7=4
+            r = r * 10 % b; //3*10/7=2 //2*10%7=6
+    
+            result += v;
+        }
 
-            // 3/7
-            for (int i = 1; i <= 20; i++) {
-                v = r * 10 / b; //3*10/7=4 //2*10/7=4
-                r = r * 10 % b; //3*10/7=2 //2*10%7=6
-                System.out.print(v + "");
-            }
+        if (result.length() > 20) {
+            System.out.print(result.substring(0,1)+"."+result.substring(1));
         } else {
-            System.out.print("1.00000000000000000000");
+            System.out.print("0."+result);
         }
     }
 }
