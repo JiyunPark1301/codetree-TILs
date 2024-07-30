@@ -6,7 +6,7 @@ public class Main {
 
         int n = sc.nextInt();
         boolean isSatisfied = true;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 2; i < n; i++) {
             if (n % i == 0)
                 isSatisfied = false;
         }
