@@ -12,8 +12,8 @@ public class Main {
         }
 
         if (isSatisfied)
-            System.out.println('C');
-        else
             System.out.println('P');
+        else
+            System.out.println('C');
     }
 }
