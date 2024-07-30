@@ -4,13 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n, x;
+        int n;
         int cnt = 0, sum = 0;
         while (true) {
             n = sc.nextInt();
 
-            x = n / 10;
-            if (x != 2)
+            if (n / 10 != 2)
                 break;
             
             cnt++;
