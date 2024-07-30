@@ -6,17 +6,17 @@ public class Main {
 
         int n;
         int cnt = 0;
-        while (sc.hasNextInt()) {
+        while (true) {
             n = sc.nextInt();
-            
-            if (cnt >= 3)
-                break;
 
             if (n % 2 == 0) {
                 n /= 2;
                 System.out.println(n);
                 cnt++;
             }   
+
+             if (cnt >= 3)
+                break;
         }
     }
 }
