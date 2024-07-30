@@ -8,7 +8,7 @@ public class Main {
         int res = 1;
         int x = 0;
         while (true) {
-            res *= 2
+            res *= 2;
             x++;
 
             if (res == N)
