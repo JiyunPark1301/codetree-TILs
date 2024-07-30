@@ -10,13 +10,13 @@ public class Main {
 
         boolean isSatisfied = true;
         for (int i = a; i <= b; i++) {
-            if (i % c != 0)
+            if (i % c == 0)
                 isSatisfied = false;
         } 
 
         if (isSatisfied)
-            System.out.println("NO");
+            System.out.println("YES");
         else
-            System.out.println("YES");   
+            System.out.println("NO");   
     }
 }
