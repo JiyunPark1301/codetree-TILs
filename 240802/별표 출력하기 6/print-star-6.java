@@ -7,7 +7,7 @@ public class Main {
         int n = sc.nextInt();
 
         for (int i = n; i >= 1; i--) {
-             for (int j = 1; j <= 4 - i; j++) {
+             for (int j = 1; j <= n - i; j++) {
                 System.out.print("  ");
             }
             for (int j = 1; j <= 2 * i - 1; j++) {
@@ -17,7 +17,7 @@ public class Main {
         }
 
         for (int i = 1; i <= n - 1; i++) {
-            for (int j = 1; j <= 3 - i; j++) {
+            for (int j = 1; j <= n - i - 1; j++) {
                 System.out.print("  ");
             }
             for (int j = 1; j <= 2 * i + 1; j++) {
