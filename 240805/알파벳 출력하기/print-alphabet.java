@@ -10,7 +10,11 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print((char)cnt);
-                cnt++;
+                if (cnt == 90) {
+                    cnt = 65;
+                } else {
+                    cnt++;
+                }
             }
             System.out.println();
         }
