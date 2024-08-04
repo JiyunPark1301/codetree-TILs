@@ -7,21 +7,21 @@ public class Main {
         int n = sc.nextInt();
         int k = 1; 
         int l = n * 2;
+        
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 1) {
-                int m = k;
                 for (int j = 1; j <= n; j++) {
                     System.out.print(k + " ");
                     k++;
                 }
-                k = m + 2 * n;
+                k = k + n;
             } else {
                 int m = l;
                 for (int j = 1; j <= n; j++) {
                     System.out.print(l + " ");
                     l--;
                 }
-                l = 2 * m;
+                l = m + 2 * n;
             }
             System.out.println();
         }
