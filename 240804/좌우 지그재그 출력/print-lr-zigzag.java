@@ -16,12 +16,11 @@ public class Main {
                 }
                 k = k + n;
             } else {
-                int m = l;
                 for (int j = 1; j <= n; j++) {
                     System.out.print(l + " ");
                     l--;
                 }
-                l = m + 2 * n;
+                l = l + 2 * n + n;
             }
             System.out.println();
         }
