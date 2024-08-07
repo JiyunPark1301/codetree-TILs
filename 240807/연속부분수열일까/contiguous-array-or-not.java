@@ -9,7 +9,6 @@ public class Main {
 
         int[] n1Arr = new int[n1];
         int[] n2Arr = new int[n2];
-        int[] idxArr = new int[100];
 
         for (int i = 0; i < n1; i++) {
             n1Arr[i] = sc.nextInt();
