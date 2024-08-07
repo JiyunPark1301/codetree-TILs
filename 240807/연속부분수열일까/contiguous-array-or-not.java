@@ -20,19 +20,17 @@ public class Main {
 
         boolean isPart = false;
         for (int i = 0; i <= n1 - n2; i++) {
-            if (n1Arr[i] == n2Arr[0]) {
-                boolean isSame = true;
-                for (int j = 1; j < n2; j++) {
-                    if (n1Arr[j + i] != n2Arr[j]) {
-                        isSame = false;
-                        break;
-                    }
-                }
-
-                if (isSame) {
-                    isPart = true;
+            boolean isSame = true;
+            for (int j = 0; j < n2; j++) {
+                if (n1Arr[j + i] != n2Arr[j]) {
+                    isSame = false;
                     break;
                 }
+            }
+
+            if (isSame) {
+                isPart = true;
+                break;
             }
         }
 
