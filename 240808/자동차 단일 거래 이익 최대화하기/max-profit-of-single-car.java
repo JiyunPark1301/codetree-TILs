@@ -11,7 +11,7 @@ public class Main {
         }
 
         int max = 0;
-        for (int i = 0; i < n - 1 ; i++) {
+        for (int i = 0; i < n ; i++) {
             for (int j = i + 1; j < n; j++) {
                 if (arr[i] < arr[j] && max < arr[j] - arr[i]) {
                     max = arr[j] - arr[i];
