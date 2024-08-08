@@ -6,7 +6,7 @@ public class Main {
 
         int N = sc.nextInt();
         int minVal = sc.nextInt();
-        int[] arr = new int[10];
+        int[] arr = new int[N];
         arr[0] = minVal;
 
         for (int i = 1; i < N; i++) {
