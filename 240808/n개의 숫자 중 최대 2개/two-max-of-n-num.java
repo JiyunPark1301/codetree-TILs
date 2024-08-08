@@ -11,29 +11,25 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int maxVal1 = arr[0];
-        int idx1 = 0;
-        for (int i = 1; i < N; i++) {
-            if (maxVal1 < arr[i]) {
-                maxVal1 = arr[i];
-                idx1 = i;
+        int max1 = 0;
+        int max2 = 0;
+        if (arr[0] > arr[1]) {
+            max1 = arr[0];
+            max2 = arr[1];
+        } else {
+            max1 = arr[1];
+            max2 = arr[0];
+        }
+
+        for (int i = 2; i < N; i++) {
+            if (arr[i] >= max1) {
+                max2 = max1;
+                max1 = arr[i];
+            } else if (arr[i] > max2) {
+                max2 = arr[i];
             }
         }
 
-        int maxVal2 = 0;
-        boolean isInitialized = false;
-        for (int i = 0; i < N; i++) {
-            if (idx1 == i)
-                continue;
-            
-            if (!isInitialized) {
-                isInitialized = true;
-                maxVal2 = arr[i];
-            } else if (maxVal2 < arr[i]) {
-                maxVal2 = arr[i];
-            }
-        }
-
-        System.out.print(maxVal1 + " " + maxVal2);
+        System.out.print(max1 + " " + max2);
     }
 }
