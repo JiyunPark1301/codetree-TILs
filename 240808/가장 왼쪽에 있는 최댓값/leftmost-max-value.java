@@ -20,11 +20,11 @@ public class Main {
             for (int i = 0; i <= idx; i++) {
                 if (max < arr[i]) {
                     max = arr[i];
-                    endIdx = i;
+                    endIdx = i - 1;
                 }
             }
-            idx = endIdx - 1;
-            System.out.print(endIdx + 1 + " ");
+            idx = endIdx;
+            System.out.print(endIdx + 2 + " ");
         }
     }
 }
