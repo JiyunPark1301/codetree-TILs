@@ -16,15 +16,15 @@ public class Main {
 
         while (idx >= 0) {
             int max = -1;
-            int endIdx = 0;
+            int maxIdx = -1;
             for (int i = 0; i <= idx; i++) {
                 if (max < arr[i]) {
                     max = arr[i];
-                    endIdx = i - 1;
+                    maxIdx = i;
                 }
             }
-            idx = endIdx;
-            System.out.print(endIdx + 2 + " ");
+            idx = maxIdx - 1;
+            System.out.print(maxIdx + 1 + " ");
         }
     }
 }
