@@ -5,33 +5,26 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         String str = sc.next();
-        String[] arr = new String[1000];
-        
-        String s = "";
-        int idx = 0;
-        for (int i = 0; i < str.length(); i++) {
-            s += str.charAt(i);
+       
+        // 변환
+        String encoded = "";
 
-            if (i == str.length() - 1) {
-                arr[idx++] = s;
-                break;
+        // 입력의 첫번째 값을 읽고 초기화합니다.
+        char currChar = str.charAt(0);
+        int numChar = 1;
+        for (int i = 1; i < str.length(); i++) {
+            if (currChar == str.charAt(i)) {
+                numChar++;
+            } else {
+                encoded += currChar + String.valueOf(numChar);
+                numChar = 1;
+                currChar = str.charAt(i);
             }
-
-            if (str.charAt(i) != str.charAt(i + 1)) {
-                arr[idx++] = s;
-                s = "";
-            } 
-                
         }
 
-        String result = "";
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == null) {
-                break;
-            } 
-            result += arr[i].charAt(0) + String.valueOf(arr[i].length());
-        }
-        System.out.println(result.length());
-        System.out.println(result);
+        encoded += currChar + String.valueOf(numChar);
+
+        System.out.println(encoded.length());
+        System.out.println(encoded);
     }
 }
