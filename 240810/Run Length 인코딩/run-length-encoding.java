@@ -6,7 +6,7 @@ public class Main {
 
         String str = sc.next();
         String[] arr = new String[1000];
-        int cnt = 1;
+        
         String s = "";
         int idx = 0;
         for (int i = 0; i < str.length(); i++) {
