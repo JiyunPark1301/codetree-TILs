@@ -7,8 +7,12 @@ public class Main {
         String str = sc.next();
         int n = sc.nextInt();
 
-        int lastIdx = str.length() - 1;
-        for (int i = lastIdx; i > lastIdx - n; i--) {
+        int startIdx = str.length() - 1;
+        int lastIdx = startIdx - n + 1;
+        if (lastIdx < 0) {
+            lastIdx = 0;
+        }
+        for (int i = startIdx; i >= lastIdx; i--) {
             System.out.print(str.charAt(i));
         }
     }
