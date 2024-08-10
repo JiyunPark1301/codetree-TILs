@@ -12,20 +12,18 @@ public class Main {
         int len2 = str2.length();
         int len3 = str3.length();
 
-        if (len1 < len2) {
-            if (len3 < len1)
-                System.out.print(len2 - len3);
-            else if (len2 < len3)
-                System.out.print(len3 - len1);
-            else
-                System.out.print(len2 - len1);
-        } else {
-            if (len3 < len2)
-                System.out.print(len1 - len3);
-            else if (len1 < len3)
-                System.out.print(len3 - len2);
-            else
-                System.out.print(len1 - len2);
-        }
+        int min = len1;
+        if (min > len2)
+            min = len2;
+        if (min > len3)
+            min = len3;
+
+        int max = len1;
+        if (max < len2)
+            max = len2;
+        if (max < len3)
+            max = len3;
+        
+        System.out.print(max - min);
     }
 }
