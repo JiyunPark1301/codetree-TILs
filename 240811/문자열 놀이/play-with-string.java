@@ -12,7 +12,11 @@ public class Main {
             if (x == 1) {
                 int a = sc.nextInt();
                 int b = sc.nextInt();
-                s = s.substring(0,a - 1) + s.charAt(b - 1) + s.substring(a, b - 1) + s.charAt(a - 1) + s.substring(b);
+                if (a < b) {
+                    s = s.substring(0,a - 1) + s.charAt(b - 1) + s.substring(a, b - 1) + s.charAt(a - 1) + s.substring(b);
+                } else {
+                    s = s.substring(0,b - 1) + s.charAt(a - 1) + s.substring(b, a - 1) + s.charAt(b - 1) + s.substring(a);
+                }
                 System.out.println(s);
             } 
             
