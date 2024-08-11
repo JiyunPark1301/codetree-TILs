@@ -16,9 +16,13 @@ public class Main {
     }
 
     public static boolean isPrime(int i) {
-        for (int j = 1; j < i; j++) {
-            if (i == 1 || i % j == 0)
+        if (i == 1)
+            return false;
+            
+        for (int j = 2; j < i; j++) {
+           if (i % j == 0) {
                 return false;
+           }
         }
         return true;
     }
