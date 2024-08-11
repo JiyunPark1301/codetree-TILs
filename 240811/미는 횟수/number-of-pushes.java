@@ -8,13 +8,16 @@ public class Main {
         String B = sc.next();
 
         int n = 0;
-        while(true) {
+        while(n < A.length()) {
             A = A.substring(A.length() - 1) + A.substring(0, A.length() - 1);
             n++;
             if (A.equals(B))
                 break;
         }
 
-        System.out.println(n);
+        if (n == A.length())
+            System.out.println(-1);
+        else
+            System.out.println(n);
     }
 }
