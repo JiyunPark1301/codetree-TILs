@@ -21,6 +21,6 @@ public class Main {
             val /= 10;
         }
         
-        return n % 2 == 0 && val % 5 == 0;
+        return n % 2 == 0 && sum % 5 == 0;
     }
 }
