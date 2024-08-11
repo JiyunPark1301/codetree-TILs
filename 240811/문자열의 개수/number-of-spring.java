@@ -12,11 +12,12 @@ public class Main {
             if (str.equals("0")) {
                 break;
             }
-            cnt++;
-
-            if (cnt % 2 == 1) {
+            
+            if (cnt % 2 == 0) {
                 arr[idx++] = str;
             }
+
+            cnt++;
         }
 
         System.out.println(cnt);
