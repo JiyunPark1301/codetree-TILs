@@ -14,13 +14,7 @@ public class Main {
             } else if (n == 2) {
                 str = str.substring(str.length() - 1) + str.substring(0, str.length() - 1);
             } else if (n == 3) {
-                //str = new StringBuilder(str).reverse().toString();
-
-                String r = "";
-                for (int j = str.length() - 1 ; j >= 0; j--) {
-                    r += str.charAt(j);
-                }
-                str = r;
+                str = new StringBuilder(str).reverse().toString();
             }
 
             System.out.println(str);
