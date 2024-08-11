@@ -14,9 +14,13 @@ public class Main {
     }
 
     public static boolean isSatisfied(int n) {
-        String str = Integer.toString(n);
-        int val = str.charAt(0) - '0' + str.charAt(1) - '0';
-
+        int sum = 0;
+        int val = n;
+        while (val > 0) {
+            sum += val % 10;
+            val /= 10;
+        }
+        
         return n % 2 == 0 && val % 5 == 0;
     }
 }
