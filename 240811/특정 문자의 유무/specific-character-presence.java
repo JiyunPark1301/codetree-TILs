@@ -6,22 +6,12 @@ public class Main {
 
         String str = sc.next();
 
-        boolean isExist1 = false;
-        boolean isExist2 = false;
-        for (int i = 0; i < str.length() - 1; i++) {
-            String res = String.valueOf(str.charAt(i)) + String.valueOf(str.charAt(i + 1));
-            if (res.equals("ee"))
-                isExist1 = true;
-            else if (res.equals("ab"))
-                isExist2 = true;
-        }
-
-        if (isExist1)
+        if (str.contains("ee"))
             System.out.print("Yes ");
         else
             System.out.print("No ");
 
-        if (isExist2)
+        if (str.contains("ab"))
             System.out.print("Yes");
         else
             System.out.print("No");
