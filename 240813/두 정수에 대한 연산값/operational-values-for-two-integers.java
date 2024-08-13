@@ -27,7 +27,7 @@ public class Main {
     }
 
     public static void getResult(IntWrapper aWrapper, IntWrapper bWrapper) {
-        if (aWrapper.value <= bWrapper.value) {
+        if (aWrapper.value < bWrapper.value) {
             bWrapper.value += 25;
             aWrapper.value *= 2;
         } else {
