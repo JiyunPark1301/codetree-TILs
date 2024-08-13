@@ -22,7 +22,7 @@ public class Main {
             return false;
         
         // Y가 4의 배수라는 것이 보장된다.
-        // Y가 100의 배수가 아니면 윤년이 아니다.
+        // Y가 100의 배수가 아니면 윤년이다.
         if (Y % 100 != 0)
             return true;
 
@@ -31,20 +31,21 @@ public class Main {
         if (Y % 400 == 0)
             return true;
 
+        // 나머지는 윤년이 아니다.
         return false;
     }
 
     public static boolean isValid(int Y, int M, int D) {
         if (M == 2) {
             if (isYoonNyeon(Y))
-                return D == 29;
-            return D == 28;
+                return D <= 29;
+            return D <= 28;
         } 
 
         if (M == 4 || M == 6 || M == 9 || M == 11) {
-            return D == 30;
+            return D <= 30;
         }
-        return D == 31;
+        return D <= 31;
     }
 
     public static String getSeason(int M) {
