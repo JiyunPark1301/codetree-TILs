@@ -18,7 +18,10 @@ public class Main {
     }
 
     public static boolean isValid() {
-        if (1 <= D && D <= dayArr[M - 1] )
+        // M(월)이 1보다 작거나 12보다 크면 유효하지 않음
+        if (1 > M || M > 12)
+            return false;
+        if (1 <= D && D <= dayArr[M - 1])
             return true;
         return false;
     }
