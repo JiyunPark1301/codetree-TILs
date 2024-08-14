@@ -19,6 +19,9 @@ public class Main {
     }
 
     public static int getMax(int max, int idx) {
+        if (n == 1)
+            return max;
+            
         if (idx == n - 1)
             return max;
             
