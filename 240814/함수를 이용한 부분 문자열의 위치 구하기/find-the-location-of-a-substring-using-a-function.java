@@ -14,6 +14,20 @@ public class Main {
     }
 
     public static int getIndex() {
-        return str1.indexOf(str2);
+        for (int i = 0; i < str1.length() - str2.length() + 1; i++) {
+            if (isSame(i))
+                return i;
+        }
+
+        return -1;
+    }
+
+    public static boolean isSame(int i) {
+        for (int j = 0; j < str2.length(); j++) {
+            if (str1.charAt(i + j) != str2.charAt(j))
+                return false;
+        } 
+
+        return true;
     }
 }
