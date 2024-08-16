@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Student implements Comparable<Student> {
+class Student {
     String name;
     int sub1;
     int sub2;
@@ -13,10 +13,10 @@ class Student implements Comparable<Student> {
         this.sub3 = sub3;
     }
 
-    @Override
-    public int compareTo(Student s) {
-        return (this.sub1 + this.sub2 + this.sub3) - (s.sub1 + s.sub2 + s.sub3);
-    }
+    // @Override
+    // public int compareTo(Student s) {
+    //     return (this.sub1 + this.sub2 + this.sub3) - (s.sub1 + s.sub2 + s.sub3);
+    // }
 }
 
 public class Main {
@@ -35,7 +35,7 @@ public class Main {
             arr[i] = new Student(name, sub1, sub2, sub3);
         }
 
-        Arrays.sort(arr);
+        Arrays.sort(arr, (a, b) -> (a.sub1 + a.sub2 + a.sub3) - (b.sub1 + b.sub2 + b.sub3));
 
         for (int i = 0; i < n; i++) {
             System.out.println(arr[i].name + " " + arr[i].sub1 + " " + arr[i].sub2 + " " + arr[i].sub3); 
