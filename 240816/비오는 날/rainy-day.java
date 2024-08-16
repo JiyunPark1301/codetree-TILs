@@ -30,19 +30,16 @@ public class Main {
         int lastIdx = 0;
         boolean isInitialized = false;
         for (int i = 0; i < n; i++) {
-            if (!isInitialized && "Rain".equals(arr[i].w)) {
-                isInitialized = true;
-                lastIdx = i;
-            }
-
-            if (!isInitialized)
-                continue;
-            
             if (!"Rain".equals(arr[i].w))
                 continue;
 
-            if (arr[i].date.compareTo(arr[lastIdx].date) < 0) 
+            if (isInitialized) {
+                if (arr[i].date.compareTo(arr[lastIdx].date) < 0) 
                 lastIdx = i;
+            } else {
+                isInitialized = true;
+                lastIdx = i;
+            }
         }
 
         System.out.print(arr[lastIdx].date + " " + arr[lastIdx].yoil + " " + arr[lastIdx].w);
