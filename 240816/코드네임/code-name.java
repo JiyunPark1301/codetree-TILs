@@ -23,13 +23,10 @@ public class Main {
             arr[i] = new NewClass(codeName, score);
         }
 
-        int min = arr[0].score;
         int minIdx = 0;
         for (int i = 1; i < 5; i++) {
-            if (arr[i].score < min) {
-                min = arr[i].score;
+            if (arr[i].score < arr[minIdx].score)
                 minIdx = i;
-            }
         }
 
         System.out.print(arr[minIdx].codeName + " " + arr[minIdx].score);
