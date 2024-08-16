@@ -19,11 +19,9 @@ public class Main {
         
         for (int i = 0; i < N; i++) {
             int v = sc.nextInt();
-            arr[i] = new MyInteger(v, i + 1);
+            arr[i] = new MyInteger(v, i);
         }
-
-        MyInteger[] originalArr = arr.clone();
-        
+    
         // 값을 기준으로 오름차순 정렬
         // 값이 같은 경우는 index를 기준으로 오름차순 정렬(먼저 입력된 것)
         Arrays.sort(arr, (a, b) -> {
@@ -32,14 +30,13 @@ public class Main {
             return a.value - b.value;
         });
 
-        for (int i = 0; i < originalArr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if (originalArr[i].value == arr[j].value && originalArr[i].idx == arr[j].idx) {
-                    System.out.print(j + 1 + " ");
-                    break;
-                }
-            }
+        int[] answer = new int[N];
+        for (int i = 0; i < N; i++) {
+            answer[arr[i].idx] = i + 1;
+        }
 
+        for (int i = 0; i < N; i++) {
+            System.out.print(answer[i] + " ");
         }
     }
 }
