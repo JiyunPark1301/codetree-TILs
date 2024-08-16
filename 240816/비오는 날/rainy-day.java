@@ -35,7 +35,7 @@ public class Main {
 
             if (isInitialized) {
                 if (arr[i].date.compareTo(arr[lastIdx].date) < 0) 
-                lastIdx = i;
+                    lastIdx = i;
             } else {
                 isInitialized = true;
                 lastIdx = i;
