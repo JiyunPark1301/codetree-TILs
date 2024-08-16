@@ -30,17 +30,25 @@ public class Main {
             arr[i] = new Student(name, kor, eng, math);
         }
 
-        Arrays.sort(arr, new Comparator<Student>() {
-            @Override
-            public int compare(Student a, Student b) {
-                if (a.kor == b.kor) {
-                    if (a.eng == b.eng) {
-                        return b.math - a.math;
-                    }
-                    return b.eng - a.eng;
-                }
-                return b.kor - a.kor;
+        // Arrays.sort(arr, new Comparator<Student>() {
+        //     @Override
+        //     public int compare(Student a, Student b) {
+        //         if (a.kor == b.kor) {
+        //             if (a.eng == b.eng) {
+        //                 return b.math - a.math;
+        //             }
+        //             return b.eng - a.eng;
+        //         }
+        //         return b.kor - a.kor;
+        //     }
+        // });
+        Arrays.sort(arr, (a , b) -> {
+            if (a.kor == b.kor) {
+                if (a.eng == b.eng)
+                    return b.math - a.math;
+                return b.eng - a.eng;
             }
+            return b.kor - a.kor;
         });
 
         for (int i = 0; i < n; i++) {
