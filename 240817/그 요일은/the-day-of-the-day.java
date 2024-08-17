@@ -34,7 +34,7 @@ public class Main {
         int diff = y - x;
         int cnt = 0;
         for (int i = 1; i <= diff; i++) {
-            if (7 * i - 2 <= diff)
+            if (7 * i - 7 + idx <= diff)
                 cnt++;
         }
 
