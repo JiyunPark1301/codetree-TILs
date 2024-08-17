@@ -6,14 +6,10 @@ public class Main {
 
         String str = sc.next();
         char[] arr = str.toCharArray();
-        int[] newArr = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            newArr[i] = arr[i] - '0';
-        }
 
         int num = 0;
-        for (int i = 0; i < newArr.length; i++) {
-            num = num * 2 + newArr[i];
+        for (int i = 0; i < arr.length; i++) {
+            num = num * 2 + (arr[i] - '0');
         } 
 
         System.out.println(num);
