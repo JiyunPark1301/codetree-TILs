@@ -9,21 +9,10 @@ public class Main {
         int c = sc.nextInt();
         int d = sc.nextInt();
 
-        int elapsedTime = 0;
+        int x = 60 * a + b;
+        int y = 60 * c + d;
 
-        while(true) {
-            if (a == c && b == d)
-                break;
-            
-            b++;
-            elapsedTime++;
-
-            if (b == 60) {
-                a++;
-                b = 0;
-            }
-        }
-
+        int elapsedTime = y - x;
         System.out.println(elapsedTime);
     }
 }
