@@ -22,7 +22,7 @@ public class Main {
         for (int i = 1; i <= m2; i++) {
             y += days[i];
         }
-        int diff = y - x;
+        int diff = y - x > 0 ? y - x - 1 : y - x;
         while (diff < 0) {
             diff += 7;
         }
