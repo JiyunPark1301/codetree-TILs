@@ -11,6 +11,9 @@ public class Main {
         int x = 11 + 11 * 60 + 24 * 60 * 11;
         int y = c + b * 60 + 24 * 60 * a;
 
-        System.out.print(y - x);
+        if (x > y)
+            System.out.print(-1);
+        else
+            System.out.print(y - x);
     }
 }
