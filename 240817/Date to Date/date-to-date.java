@@ -11,20 +11,20 @@ public class Main {
         int d2 = sc.nextInt();
 
         int[] days = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        int elapsedTime = 0;
+        int elapsedDays = 1;
         while(true) {
             if (m1 == m2 && d1 == d2)
                 break;
             
             d1++;
-            elapsedTime++;
+            elapsedDays++;
 
             if (d1 > days[m1]) {
                 m1++;
-                d1= 0;
+                d1 = 1;
             }
         }
 
-        System.out.println(elapsedTime);
+        System.out.println(elapsedDays);
     }
 }
