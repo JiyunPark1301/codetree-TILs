@@ -13,7 +13,7 @@ public class Main {
             int b = sc.nextInt();
 
             for (int j = a; j <= b; j++) {
-                arr[i] += 1;
+                arr[j] += 1;
             }
         }
 
