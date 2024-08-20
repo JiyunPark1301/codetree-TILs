@@ -15,9 +15,7 @@ public class Main {
 
             for (int j = x1; j < x2; j++) {
                 for (int k = y1; k < y2; k++) {
-                    if (i == 2 && arr[j][k] == 0)
-                        continue;
-                    arr[j][k]++;
+                    arr[j][k] = i + 1;
                 }
             }
         }
@@ -25,7 +23,7 @@ public class Main {
         int area = 0;
         for (int i = 0; i < MAX_X; i++) {
             for (int j = 0; j < MAX_X; j++) {
-                if (arr[i][j] == 1)
+                if (arr[i][j] == 1 || arr[i][j] == 2)
                     area++;
             }
         }
