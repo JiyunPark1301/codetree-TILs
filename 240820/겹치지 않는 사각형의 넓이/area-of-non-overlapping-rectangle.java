@@ -8,10 +8,10 @@ public class Main {
 
         int[][] arr = new int[MAX_X][MAX_X];
         for(int i = 0; i < 3; i++) {
-            int x1 = sc.nextInt();
-            int y1 = sc.nextInt();
-            int x2 = sc.nextInt();
-            int y2 = sc.nextInt();
+            int x1 = sc.nextInt() + 1000;
+            int y1 = sc.nextInt() + 1000;
+            int x2 = sc.nextInt() + 1000;
+            int y2 = sc.nextInt() + 1000;
 
             for (int j = x1; j < x2; j++) {
                 for (int k = y1; k < y2; k++) {
