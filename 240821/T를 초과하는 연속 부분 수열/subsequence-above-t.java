@@ -12,13 +12,13 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int cnt = arr[0] > t ? 1 : 0;
-        int max = cnt;
-        for (int i = 1; i < n; i++) {
-            if (arr[i - 1] > t && arr[i] > t) {
+        int cnt = 0;
+        int max = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > t) {
                 cnt++;
             } else {
-                cnt = arr[i] > t ? 1 : 0;
+                cnt = 0;
             }
             
             max = Math.max(max, cnt);
