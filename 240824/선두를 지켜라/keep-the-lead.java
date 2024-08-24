@@ -15,7 +15,7 @@ public class Main {
             int t = sc.nextInt(); // 시간
 
             for (int j = hour; j < hour + t; j++) {
-                arrA[j] += v;
+                arrA[j] += arrA[j - 1] + v;
             }
 
             hour += t;
@@ -28,26 +28,38 @@ public class Main {
             int t = sc.nextInt(); // 시간
 
             for (int j = hour; j < hour + t; j++) {
-                arrB[j] += v;
+                arrB[j] += arrB[j - 1] + v;
             }
 
             hour += t;
         }
 
+        boolean isInitialized = false;
+        String isFirst = "";
+        String prevFirst = "";
         int cnt = 0;
-        String prevFirst = (arrA[1] == arrB[1]) ? "" : (arrA[1] < arrB[1]) ? "B" : "A";
-        String first = prevFirst;
-        for (int i = 2; i < hour; i++) {
+        for (int i = 1; i < hour; i++) {
+            if (!isInitialized) {
+                if (arrA[i] < arrB[i]) {
+                    prevFirst = "B";
+                    isInitialized = true;
+                } else if (arrA[i] > arrB[i]){
+                    prevFirst = "A";
+                    isInitialized = true;
+                }
+            }    
+
             if (arrA[i] < arrB[i]) {
-                first = "B";
-            } else if (arrA[i] > arrB[i]) {
-                first = "A";
+                isFirst = "B";
+            } else if (arrA[i] > arrB[i]){
+                isFirst = "A";
             }
 
-            if (!prevFirst.equals(first)) {
+            if (!isFirst.equals(prevFirst)) {
                 cnt++;
-                prevFirst = first;
+                prevFirst = isFirst;
             }
+            
         }
 
         System.out.print(cnt);
