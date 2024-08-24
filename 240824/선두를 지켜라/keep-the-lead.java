@@ -34,32 +34,30 @@ public class Main {
             hour += t;
         }
 
-        boolean isInitialized = false;
-        String isFirst = "";
-        String prevFirst = "";
+        int leader = 0; // 선두가 0이라는 것은 선두가 없거나, A=B가 같다는 뜻
         int cnt = 0;
         for (int i = 1; i < hour; i++) {
-            if (!isInitialized) {
-                if (arrA[i] < arrB[i]) {
-                    prevFirst = "B";
-                    isInitialized = true;
-                } else if (arrA[i] > arrB[i]){
-                    prevFirst = "A";
-                    isInitialized = true;
-                }
-            }    
-
+            // B가 선두인 경우
             if (arrA[i] < arrB[i]) {
-                isFirst = "B";
-            } else if (arrA[i] > arrB[i]){
-                isFirst = "A";
-            }
 
-            if (!isFirst.equals(prevFirst)) {
-                cnt++;
-                prevFirst = isFirst;
+                // 기존에 A가 선두였다면
+                // 선두가 변경된 것이므로 cnt를 증가시킨다.
+                if (leader == 1)
+                    cnt++;
+                
+                // 현재 선두는 B가 된다.
+                leader = 2;
+            } else if (arrA[i] > arrB[i]) {
+                // A가 선두인 경우
+
+                // 기존에 B가 선두였다면
+                // 선두가 변경된 것이므로 cnt를 증가시킨다.
+                if (leader == 2)
+                    cnt++;
+
+                // 현재 선두는 A가 된다.
+                leader = 1;
             }
-            
         }
 
         System.out.print(cnt);
