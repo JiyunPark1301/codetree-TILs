@@ -43,15 +43,13 @@ public class Main {
 
         int end = Math.max(second1, second2); // 12 15
 
-        if (second1 != second2) {
-            if (second1 == end) { 
-                for (int i = second2; i < second1; i++) {
-                    arrB[i] = arrB[second2 - 1];
-                }
-            } else {
-                for (int i = second1; i < second2; i++) {// 12 ~ 14
-                    arrA[i] = arrA[second1 - 1];
-                }
+        if (second2 < second1) { 
+            for (int i = second2; i < second1; i++) {
+                arrB[i] = arrB[second2 - 1];
+            }
+        } else if (second1 < second2){
+            for (int i = second1; i < second2; i++) {// 12 ~ 14
+                arrA[i] = arrA[second1 - 1];
             }
         }
 
