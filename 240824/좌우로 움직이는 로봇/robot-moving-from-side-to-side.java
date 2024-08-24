@@ -41,7 +41,7 @@ public class Main {
             second2 += x;  
         }
 
-        int end = Math.max(second1, second2);
+        int end = Math.max(second1, second2); // 12 15
 
         if (second1 != second2) {
             if (second1 == end) { 
@@ -49,7 +49,7 @@ public class Main {
                     arrB[i] = arrB[second2 - 1];
                 }
             } else {
-                for (int i = second1; i < second2; i++) {
+                for (int i = second1; i < second2; i++) {// 12 ~ 14
                     arrA[i] = arrA[second1 - 1];
                 }
             }
@@ -58,8 +58,9 @@ public class Main {
         int cnt = 0;
         for (int i = 1; i < end; i++) {
             if (arrA[i] == arrB[i]) {
-                if (i != 1 && arrA[i - 1] == arrB[i - 1])
+                if (arrA[i - 1] == arrB[i - 1])
                     continue;
+
                 cnt++;
             }
         }
