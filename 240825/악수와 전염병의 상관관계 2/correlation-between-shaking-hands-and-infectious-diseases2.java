@@ -24,7 +24,7 @@ public class Main {
         isSick[P] = 1;
 
         for (int i = 1; i < N + 1; i++) {
-            cntArr[i] = 2;
+            cntArr[i] = K;
         }
 
         for (int i = 1; i < 251; i++) {
