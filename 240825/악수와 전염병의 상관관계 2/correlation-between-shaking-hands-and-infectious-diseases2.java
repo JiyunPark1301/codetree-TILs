@@ -1,5 +1,17 @@
 import java.util.*;
 
+class Shake {
+    int time;
+    int person1;
+    int person2;
+
+    public Shake(int time, int person1, int person2) {
+        this.time = time;
+        this.person1 = person1;
+        this.person2 = person2;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -12,14 +24,17 @@ public class Main {
         int[] cntArr = new int[N + 1]; //감염가능 횟수
         int[] isSick = new int[N + 1]; //감염여부(0: 음성, 1: 양성)
 
-        int[][] arr = new int[251][2];
+        Shake[] arr = new Shake[T];
         for (int i = 0; i < T; i++) {
             int t = sc.nextInt();
             int x = sc.nextInt();
             int y = sc.nextInt();
-            arr[t][0] = x;
-            arr[t][1] = y;
+            
+            arr[i] = new Shake(t, x, y);
         }
+
+        // 시간으로 오름차순 정렬
+        Arrays.sort(arr, (a, b) -> a.time - b.time);
 
         isSick[P] = 1;
 
@@ -27,12 +42,9 @@ public class Main {
             cntArr[i] = K;
         }
 
-        for (int i = 1; i < 251; i++) {
-            int x = arr[i][0];
-            int y = arr[i][1];
-            
-            if (x == 0 && y == 0)
-                continue;
+        for (int i = 0; i < T; i++) {
+            int x = arr[i].person1;
+            int y = arr[i].person2;
             
             if (isSick[x] == 1) {
                 if (isSick[y] == 1) {
