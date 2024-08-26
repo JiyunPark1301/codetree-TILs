@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[] dx = {0, 1, 0, -1};
-        int[] dy = {1, 0, -1, 0};
+        int[] dx = {1, 0, -1, 0};
+        int[] dy = {0, -1, 0, 1};
 
         String str = sc.next();
         int dirNum = 3; // 북쪽
