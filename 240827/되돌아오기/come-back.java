@@ -12,12 +12,13 @@ public class Main {
         int x = 0;
         int y = 0;
         int second = 0;
+        boolean isSatisfied = false;
+
         for (int i = 0; i < N; i++) {
             char c = sc.next().charAt(0);
             int dirNum = getDirNum(c); //움직인 방향
             int dis = sc.nextInt(); //움직인 거리
             
-            boolean isSatisfied = false;
             for (int j = 0; j < dis; j++) {
                 x = x + dx[dirNum];
                 y = y + dy[dirNum];
@@ -33,7 +34,11 @@ public class Main {
                 break;
         }
 
-        System.out.println(second);
+        if (isSatisfied) {
+            System.out.println(second);
+        } else {
+            System.out.println(-1);
+        }
     }
 
     public static int getDirNum(char c) {
