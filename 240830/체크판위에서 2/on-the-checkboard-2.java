@@ -16,10 +16,10 @@ public class Main {
         }
 
         int cnt = 0;
-        for (int i = 1; i < C - 2; i++) {
-            for (int j = 1; j < R - 2; j++) {
-                for (int k = i + 1; k < C - 1; k++) {
-                    for (int r = j + 1; r < R - 1; r++) {
+        for (int i = 1; i < R - 2; i++) {
+            for (int j = 1; j < C - 2; j++) {
+                for (int k = i + 1; k < R - 1; k++) {
+                    for (int r = j + 1; r < C - 1; r++) {
                         if (arr[0][0] == 'W' && arr[R-1][C-1] == 'B') {
                             if (arr[i][j] == 'B' && arr[k][r] == 'W')
                                 cnt++;
