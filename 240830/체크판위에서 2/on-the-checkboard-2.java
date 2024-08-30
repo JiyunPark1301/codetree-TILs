@@ -20,10 +20,10 @@ public class Main {
             for (int j = 1; j < R - 2; j++) {
                 for (int k = i + 1; k < C - 1; k++) {
                     for (int r = j + 1; r < R - 1; r++) {
-                        if (arr[0][0] == 'W') {
+                        if (arr[0][0] == 'W' && arr[R-1][C-1] == 'B') {
                             if (arr[i][j] == 'B' && arr[k][r] == 'W')
                                 cnt++;
-                        } else {
+                        } else if (arr[0][0] == 'B' && arr[R-1][C-1] == 'W') {
                             if (arr[i][j] == 'W' && arr[k][r] == 'B')
                                 cnt++;
                         }
