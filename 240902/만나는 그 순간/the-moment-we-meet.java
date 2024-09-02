@@ -43,7 +43,7 @@ public class Main {
             time = time + x;
         }
 
-        int result = 0;
+        int result = -1;
         for (int i = 1; i < time; i++) {
             if (arr1[i] == arr2[i]) {
                 result = i;
