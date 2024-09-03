@@ -52,7 +52,7 @@ public class Main {
         } else if (num <= 2 * N) {
             x = num - N - 1;
             y = N - 1;
-            dirNum = 0;
+            dirNum = 2;
         } else if (num <= 3 * N) {
             x = N - 1;
             y = N - (num - N * 2);
@@ -60,7 +60,7 @@ public class Main {
         } else {
             x = N - (num - N * 3);
             y = 0;
-            dirNum = 2;
+            dirNum = 0;
         }
     }
 
