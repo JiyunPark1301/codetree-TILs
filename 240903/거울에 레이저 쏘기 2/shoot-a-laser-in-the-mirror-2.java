@@ -24,7 +24,7 @@ public class Main {
         int[] dx = {0, 1, 0, -1};
         int[] dy = {1, 0, -1, 0};
         int cnt = 0;
-        while(true) {
+        while(inRange(x, y)) {
             if (arr[x][y] == '/') { 
                 dirNum = 3 - dirNum;
             } else { 
@@ -33,16 +33,9 @@ public class Main {
                 else
                     dirNum -= 1;
             }
-
-            int curX = x + dx[dirNum];
-            int curY = y + dy[dirNum];
-
             cnt++;
-            if (!inRange(curX, curY))
-                break;
-            
-            x = curX;
-            y = curY;
+            x = x + dx[dirNum];
+            y = y + dy[dirNum];
         }
 
         System.out.println(cnt);
