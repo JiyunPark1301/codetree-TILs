@@ -16,8 +16,8 @@ public class Main {
             int sum = 0;
             for (int j = i + 2; j < n; j++) {
                 sum = arr[i] + arr[j];
+                max = Math.max(sum, max);
             }
-            max = Math.max(sum, max);
         }
 
         System.out.println(max);
