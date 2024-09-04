@@ -15,7 +15,7 @@ public class Main {
             int result = 0;
             int idx = 0;
             for (int j = i; j < i + N; j++) { //시작위치 
-                result += arr[j % 5] * idx++;
+                result += arr[j % N] * idx++;
             }
 
             min = Math.min(result, min);
