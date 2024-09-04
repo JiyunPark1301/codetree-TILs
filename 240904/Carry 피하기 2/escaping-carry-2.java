@@ -18,7 +18,7 @@ public class Main {
                     int a = arr[i], b = arr[j], c = arr[k];
                     int sum = 0;
                     boolean isSatisfied = true;
-                    while(true) {
+                    while(a != 0 || b != 0 || c != 0) {
                         int valA = a % 10;
                         int valB = b % 10;
                         int valC = c % 10;
@@ -31,9 +31,6 @@ public class Main {
                         a /= 10;
                         b /= 10;
                         c /= 10;
-
-                        if (a == 0 && b == 0 && c == 0)
-                            break;
                     }
 
                     if (isSatisfied) {
