@@ -8,34 +8,17 @@ public class Main {
         int K = sc.nextInt(); 
 
         int[] candy = new int[101];
-        int minIdx = 101;
-        int max = Integer.MIN_VALUE;
-        int maxIdx = -1;
-        int min = Integer.MAX_VALUE;
         for (int i = 0; i < N; i++) {
             int num = sc.nextInt();
             int idx = sc.nextInt();
 
             candy[idx] += num;
-
-            if (max < candy[idx]) {
-                max = candy[idx];
-                maxIdx = idx;
-            }
-            
-            if (min > candy[idx]) {
-                min = candy[idx];
-                minIdx = idx;
-            }
         }
 
-        int startIdx = minIdx - K - K;
-        int endIdx = maxIdx + K + K;
-
         int result = 0;
-        for (int i = startIdx; i <= endIdx; i++) {
+        for (int i = 0; i <= 100; i++) {
             int sum = 0;
-            for (int j = i; j < i + 2 * K + 1; j++) {
+            for (int j = i - K; j < i + K; j++) {
                 if (j < 0 || j > 100)
                     continue;
                 sum += candy[j];
