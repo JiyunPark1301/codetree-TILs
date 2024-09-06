@@ -18,7 +18,7 @@ public class Main {
         int result = 0;
         for (int i = 0; i <= 100; i++) {
             int sum = 0;
-            for (int j = i - K; j < i + K; j++) {
+            for (int j = i - K; j <= i + K; j++) {
                 if (j < 0 || j > 100)
                     continue;
                 sum += candy[j];
