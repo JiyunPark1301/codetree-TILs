@@ -36,7 +36,7 @@ public class Main {
         for (int i = startIdx; i <= endIdx; i++) {
             int sum = 0;
             for (int j = i; j < i + 2 * K + 1; j++) {
-                if (j < 0)
+                if (j < 0 || j > 100)
                     continue;
                 sum += candy[j];
             }
