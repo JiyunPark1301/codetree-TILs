@@ -15,9 +15,9 @@ public class Main {
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
                 for (int k = 1; k <= N; k++) {
-                    if (i - arr[0] <= 2 || j - arr[1] <= 2 || k - arr[2] <= 2) {
-                        cnt++;
-                    }
+                    if (Math.abs(i - arr[0]) > 2 && Math.abs(j - arr[1]) > 2 && Math.abs(k - arr[2]) > 2) 
+                        continue;
+                    cnt++;
                 }
             }
         }
