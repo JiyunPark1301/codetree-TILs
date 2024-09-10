@@ -12,6 +12,8 @@ public class Main {
             price[i] = sc.nextInt();
         }
 
+        Arrays.sort(price);
+
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < N; i++) {
             int sum = 0;
