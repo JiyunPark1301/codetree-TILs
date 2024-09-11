@@ -25,7 +25,7 @@ public class Main {
         for (int i = a; i <= b; i++) {
             int min1 = Integer.MAX_VALUE;
             int min2 = Integer.MAX_VALUE;
-            for (int j = a; j <= b; j++) {
+            for (int j = 1; j <= 1000; j++) {
                 int dis = Math.abs(i - j);
                 if (arr[j] == 1) {
                     min1 = Math.min(dis, min1);
@@ -33,8 +33,9 @@ public class Main {
                     min2 = Math.min(dis, min2);
                 }
             }
-            if (min1 <= min2)
+            if (min1 <= min2) {
                 result++;
+            }
         }
 
         System.out.println(result);
@@ -45,5 +46,3 @@ public class Main {
 //x = k로부터 가장 가까이에 있는 알파벳 S까지의 거리 d1
 //x = k로부터 가장 가까이에 있는 알파벳 N까지의 거리 d2
 //d1 <= d2인 경우 x = k는 특별한 위치
-
-// S 10
