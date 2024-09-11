@@ -20,12 +20,15 @@ public class Main {
                 value /= 10;
             }
 
-            int max = Integer.MIN_VALUE;
+            boolean isSatisfied = false;
             for (int j = 0; j < 10; j++) {
-                max = Math.max(max, arr[j]);
+                if (arr[j] == sameCnt) {
+                    isSatisfied = true;
+                    break;
+                }
             }
 
-            if (max == sameCnt)
+            if (isSatisfied)
                 result++;
         }
 
