@@ -10,12 +10,17 @@ public class Main {
 
         int max = 0;
         for (int i = 0; i <= C / A; i++) {
-            for (int j = 0; j <= C / B; j++) {
-                int value = A * i + B * j;
-                if (value <= C) {
-                    max = Math.max(value, max);
-                }
-            }
+            //A를 i번 곱한값
+            int num = A * i;
+
+            //C에서 A를 i번 곱한값을 B로 나눈다.
+            //그러면, B가 곱해진 최대횟수를 구할 수 있다.
+            int cntB = (C - num) / B;
+
+            //B를 cntB번 곲한값을 더한다.
+            num += cntB * B;
+
+            max = Math.max(num, max);
         }
 
         System.out.println(max);
