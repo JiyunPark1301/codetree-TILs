@@ -23,7 +23,7 @@ public class Main {
             {new Pair(1, 0), new Pair(0, 0), new Pair(0, 1)},
             {new Pair(0, -1), new Pair(0, 0), new Pair(1, 0)},
             {new Pair(0, -1), new Pair(0, 0), new Pair(-1, 0)},
-            {new Pair(0, -1), new Pair(0, 0), new Pair(1, 1)},
+            {new Pair(0, -1), new Pair(0, 0), new Pair(0, 1)},
             {new Pair(-1, 0), new Pair(0, 0), new Pair(1, 0)}
         };
 
