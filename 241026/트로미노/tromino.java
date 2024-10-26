@@ -33,7 +33,7 @@ public class Main {
             int ny = y + arr[type][i].y;
 
             if (!inRange(nx, ny))
-                break;
+                return;
             
             sum += board[nx][ny];
         }
