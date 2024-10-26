@@ -15,7 +15,7 @@ public class Main {
     }
 
     public static void dfs(int idx) {
-        if (idx >= str.length()) {
+        if (idx == str.length() + 1) {
             int val = 0;
             char op = ' ';
             for (int i = 0; i < str.length(); i++) {
