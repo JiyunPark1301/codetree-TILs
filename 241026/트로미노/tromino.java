@@ -4,6 +4,14 @@ public class Main {
     static int n, m;
     static int[][] board;
     static int answer;
+    static Pair[][] arr = {
+        {new Pair(-1, 0), new Pair(0, 0), new Pair(0, 1)},
+        {new Pair(1, 0), new Pair(0, 0), new Pair(0, 1)},
+        {new Pair(0, -1), new Pair(0, 0), new Pair(1, 0)},
+        {new Pair(0, -1), new Pair(0, 0), new Pair(-1, 0)},
+        {new Pair(0, -1), new Pair(0, 0), new Pair(0, 1)},
+        {new Pair(-1, 0), new Pair(0, 0), new Pair(1, 0)}
+    };
 
     static class Pair {
         int x, y;
@@ -18,15 +26,6 @@ public class Main {
     }
 
     public static void getAnswer(int x, int y, int type) {
-        Pair[][] arr = {
-            {new Pair(-1, 0), new Pair(0, 0), new Pair(0, 1)},
-            {new Pair(1, 0), new Pair(0, 0), new Pair(0, 1)},
-            {new Pair(0, -1), new Pair(0, 0), new Pair(1, 0)},
-            {new Pair(0, -1), new Pair(0, 0), new Pair(-1, 0)},
-            {new Pair(0, -1), new Pair(0, 0), new Pair(0, 1)},
-            {new Pair(-1, 0), new Pair(0, 0), new Pair(1, 0)}
-        };
-
         int sum = 0;
         for (int i = 0; i < 3; i++) {
             int nx = x + arr[type][i].x;
