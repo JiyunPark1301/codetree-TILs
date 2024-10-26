@@ -7,7 +7,6 @@ public class Main {
     static int[][] direction;
     static int[] dx = {-1, -1, 0, 1, 1, 1, 0, -1};
     static int[] dy = {0, 1, 1, 1, 0, -1, -1, -1};
-    static boolean isFinished;
     static int answer;
 
     public static boolean inRange(int x, int y) {
