@@ -83,7 +83,7 @@ public class Main {
 
             bombType[x][y] = i;
             dfs(idx + 1);
-            bombType[x][y] = 0;
+            //bombType[x][y] = 0;
         }
     }
 
