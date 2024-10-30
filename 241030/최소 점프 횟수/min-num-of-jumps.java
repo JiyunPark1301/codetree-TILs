@@ -10,7 +10,7 @@ public class Main {
             answer = -1;
             return;
         }
-        
+
         if (jumpCnt >= n) {
             answer = -1;
             return;
@@ -21,7 +21,7 @@ public class Main {
             return;
         }
 
-        for (int i = 1; i <= arr[idx]; i++) {
+        for (int i = 0; i <= arr[idx]; i++) {
             dfs(idx + i, jumpCnt + 1);
         }
     }
