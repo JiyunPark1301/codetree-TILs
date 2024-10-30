@@ -11,15 +11,13 @@ public class Main {
     }
 
     public static void dfs(int idx, int jumpCnt) {
-        if (idx == n - 1) {
+        if (idx >= n - 1) {
             answer = Math.min(answer, jumpCnt);
             return;
         }
 
         for (int i = 1; i <= arr[idx]; i++) {
-            if (inRange(idx + i)) {
-                dfs(idx + i, jumpCnt + 1);
-            }
+            dfs(idx + i, jumpCnt + 1);
         }
     }
 
