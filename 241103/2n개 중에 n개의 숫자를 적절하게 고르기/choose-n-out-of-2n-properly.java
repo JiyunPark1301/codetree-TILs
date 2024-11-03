@@ -6,20 +6,16 @@ public class Main {
     static int[] arr;
     static int totalSum;
     static int answer = INT_MAX;
-    static ArrayList<Integer> list = new ArrayList<>();
 
-    public static void dfs(int idx, int sum) {
+    public static void dfs(int idx, int sum, int cnt) {
         if (idx == 2 * n) {
-            if (list.size() == n)
+            if (cnt == n)
                 answer = Math.min(answer, Math.abs(2 * sum - totalSum));
             return;
         }
 
-        list.add(arr[idx]);
-        dfs(idx + 1, sum + arr[idx]);
-
-        list.remove(list.size() - 1);
-        dfs(idx + 1, sum);
+        dfs(idx + 1, sum + arr[idx], cnt + 1);
+        dfs(idx + 1, sum, cnt);
     }
 
     public static void main(String[] args) {
@@ -32,7 +28,7 @@ public class Main {
             totalSum += arr[i];
         }
 
-        dfs(0, 0);
+        dfs(0, 0, 0);
         System.out.println(answer);
     }
 }
